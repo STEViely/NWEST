@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Logo from '@/assets/hero-mirror.png';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,16 +13,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="font-orbitron font-bold text-lg text-navy">N</span>
+              <div >
+               <img src={Logo} alt="N-WEST Logo" className="w-{auto} h-10" />
               </div>
-              <span className="font-orbitron font-bold text-2xl tracking-wider">
-                N-WEST
-              </span>
+              
             </div>
-            <p className="text-primary-foreground/70 max-w-md">
-              {t('footer.tagline')}
-            </p>
+            
           </div>
 
           {/* Quick Links */}
@@ -56,12 +53,12 @@ const Footer = () => {
             <h4 className="font-orbitron font-semibold text-lg mb-4">{t('nav.contact')}</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-primary-foreground/70">
-                <MapPin className="w-4 h-4 text-accent" />
+                <MapPin className="w-8 h-8 text-accent" />
                 <span>{t('contact.address.text')}</span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/70">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>+66 XX XXX XXXX</span>
+                <span>+66 98 103 2459</span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-accent" />

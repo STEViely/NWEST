@@ -48,6 +48,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.suzuki': 'ซูซูกิ',
     'products.nissan': 'นิสสัน',
     'products.mazda': 'มาสด้า',
+    'products.byd': 'BYD',
     'products.other': 'ยี่ห้ออื่นๆ',
     'products.available': 'สินค้าพร้อมจำหน่าย',
     'products.contact': 'สอบถามราคา',
@@ -71,7 +72,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message': 'ข้อความ',
     'contact.send': 'ส่งข้อความ',
     'contact.address': 'ที่อยู่',
-    'contact.address.text': 'กรุงเทพมหานคร, ประเทศไทย',
+    'contact.address.text': 'บางนา-ตราด กม.26 เอแบคบางนา ต.บางเสาธง อ.บางเสาธง จ.สมุทรปราการ 10540',
     'contact.hours': 'เวลาทำการ',
     'contact.hours.text': 'จันทร์ - เสาร์: 9:00 - 18:00',
     
@@ -118,6 +119,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.suzuki': 'Suzuki',
     'products.nissan': 'Nissan',
     'products.mazda': 'Mazda',
+    'products.byd': 'BYD',
     'products.other': 'Other Brands',
     'products.available': 'Available',
     'products.contact': 'Contact for Price',
@@ -141,7 +143,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.message': 'Message',
     'contact.send': 'Send Message',
     'contact.address': 'Address',
-    'contact.address.text': 'Bangkok, Thailand',
+    'contact.address.text': 'Bangna-Trad Km.26, ABAC Bangna, Bang Sao Thong, Bang Sao Thong, Samut Prakan 10540',
     'contact.hours': 'Business Hours',
     'contact.hours.text': 'Mon - Sat: 9:00 AM - 6:00 PM',
     
