@@ -3,7 +3,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Eye, Shield, Droplets, Thermometer, Sparkles, Sun } from 'lucide-react';
 import Layout from '@/components/Layout';
-import heroMirror from '@/assets/hero-mirror.png';
 
 const features = [
   { icon: Eye, titleKey: 'features.antiglare.title', descKey: 'features.antiglare.desc' },
@@ -68,7 +67,7 @@ const Index = () => {
             <div className="relative animate-fade-in">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-primary/30 blur-3xl rounded-full animate-pulse-glow" />
               <img
-                src={heroMirror}
+                src="https://res.cloudinary.com/dbmscl9hm/image/upload/v1765144947/STV01969_ugc2jj.jpg"
                 alt="N-WEST Premium Side Mirror"
                 className="relative z-10 w-full h-auto max-w-xl mx-auto animate-float drop-shadow-2xl rounded-2xl"
               />
@@ -100,7 +99,7 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-7 h-7 text-primary-foreground" />
+                  <feature.icon className="w-7 h-7 text-background" />
                 </div>
                 <h3 className="text-xl font-orbitron font-semibold mb-2">
                   {t(feature.titleKey)}
