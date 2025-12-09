@@ -40,7 +40,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-20 bg-background text-primary">
+      <section className="pt-20 pb-8 bg-background text-primary border-none">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-orbitron font-bold mb-4 animate-slide-up">
             {t("about.title")}
@@ -52,7 +52,7 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-background">
+      <section className="pt-2 bg-background border-none">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up text-primary">

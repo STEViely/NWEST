@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTheme } from '@/contexts/ThemeContext';
-import { Menu, X, Sun, Moon, Globe } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Logo from '@/assets/hero-mirror.png';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTheme } from "@/contexts/ThemeContext";
+import { Menu, X, Sun, Moon, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Logo from "@/assets/hero-mirror.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +13,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { path: '/', label: t('nav.home') },
-    { path: '/products', label: t('nav.products') },
-    { path: '/about', label: t('nav.about') },
-    { path: '/contact', label: t('nav.contact') },
+    { path: "/", label: t("nav.home") },
+    { path: "/products", label: t("nav.products") },
+    { path: "/about", label: t("nav.about") },
+    { path: "/contact", label: t("nav.contact") },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -28,7 +28,6 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src={Logo} alt="N-WEST Logo" className="w-{auto} h-10" />
-         
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,8 +38,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`font-medium transition-all duration-300 relative ${
                   isActive(link.path)
-                    ? 'text-black font-semibold'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? "text-black font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.label}
@@ -57,7 +56,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setLanguage(language === 'th' ? 'en' : 'th')}
+              onClick={() => setLanguage(language === "th" ? "en" : "th")}
               className="text-muted-foreground hover:text-foreground"
             >
               <Globe className="w-5 h-5" />
@@ -74,7 +73,7 @@ const Navbar = () => {
               onClick={toggleTheme}
               className="text-muted-foreground hover:text-foreground"
             >
-              {theme === 'light' ? (
+              {theme === "light" ? (
                 <Moon className="w-5 h-5" />
               ) : (
                 <Sun className="w-5 h-5" />
@@ -89,7 +88,11 @@ const Navbar = () => {
               className="md:hidden text-muted-foreground hover:text-foreground"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -104,8 +107,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block py-3 px-4 font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-primary bg-primary/5'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    ? "text-black bg-primary/5"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
               >
                 {link.label}
