@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect bg-white">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect bg-white drop-shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -39,7 +39,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`font-medium transition-all duration-300 relative ${
                   isActive(link.path)
-                    ? 'text-primary'
+                    ? 'text-black font-semibold'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >

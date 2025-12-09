@@ -56,7 +56,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden ">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-t from-background to-background" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
@@ -65,18 +65,18 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="animate-slide-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-secondary mb-6">
                 <Sun className="w-4 h-4" />
                 <span className="text-sm font-medium">Blue Coated Technology</span>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold text-primary mb-6 leading-tight">
                 {t('hero.title')}
               </h1>
-              <p className="text-xl text-primary/50 mb-8 max-w-lg">
+              <p className="text-xl text-primary/80 mb-8 max-w-lg">
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/70 text-background font-semibold px-8 glow-effect">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/70 text-secondary font-semibold px-8 glow-effect">
                   <Link to="/products">
                     {t('hero.cta')}
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -90,13 +90,13 @@ const Index = () => {
 
             {/* Hero Image Slideshow */}
             <div className="relative animate-fade-in w-full h-[500px] lg:h-[600px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-primary/30 blur-3xl rounded-full animate-pulse-glow" />
+              {/* <div className="absolute inset-0 bg-accent blur-2xl rounded-[50px] animate-pulse-glow" /> */}
               {heroImages.map((img, index) => (
                 <img
                   key={index}
                   src={img}
                   alt={`Hero ${index}`}
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 rounded-2xl drop-shadow-2xl ${
+                  className={` shadow-[0_0_50px_5px_#0049DA] absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 rounded-2xl drop-shadow-2xl ${
                     index === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
                   }`}
                 />
@@ -107,7 +107,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-t from-foreground to-background">
+      <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-3xl md:text-5xl font-orbitron font-bold mb-4 text-primary">{t('features.title')}</h2>
@@ -117,24 +117,29 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center group p-6 rounded-2xl bg-background border border-border hover:border-accent/50 hover-lift transition-all duration-300"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="mb-4 w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-7 h-7 text-background" />
-                </div>
-                <h3 className="text-xl font-orbitron font-semibold mb-2 text-primary">{t(feature.titleKey)}</h3>
-                <p className="text-muted-foreground leading-relaxed">{t(feature.descKey)}</p>
+                    className="hover:shadow-[0_0_20px_2px_#0049DA] flex flex-col items-center group p-6 rounded-2xl bg-background border border-border hover:border-accent/50 hover-lift transition-all duration-300"
+                      style={{ animationDelay: `${index * 100}ms` }}
+>
+                      <div className="mb-4 w-14 h-14 rounded-xl bg-primary from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <feature.icon className="w-7 h-7 text-background" />
+                      </div>
+                  <h3 className="text-xl font-orbitron font-semibold mb-2 text-primary group-hover:text-primary">
+                    {t(feature.titleKey)}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed group-hover:text-primary">
+                    {t(feature.descKey)}
+                  </p>
               </div>
+
             ))}
           </div>
         </div>
       </section>
 
       {/* Brands Section */}
-      <section className="py-20 bg-accent/10">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 bg-yellow-800">
+          <div className="text-center mb-12 ">
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold mb-4 text-primary">{t('products.title')}</h2>
             <p className="text-lg text-primary">{t('products.subtitle')}</p>
           </div>
@@ -143,14 +148,14 @@ const Index = () => {
               <Link
                 key={index}
                 to="/products"
-                className="group p-6 rounded-xl bg-primary/60 border border-primary hover:border-primary hover:bg-background/80 hover:shadow-lg transition-all duration-300 text-center"
+                className="hover:shadow-[0_0_20px_2px_#0049DA] group p-6 rounded-xl bg-background border border-primary hover:border-primary hover:bg-primary transition-all duration-300 text-center"
               >
-                <span className="font-semibold text-sm text-primary group-hover:text-primary transition-colors">{t(brand.key)}</span>
+                <span className="font-semibold text-sm text-primary group-hover:text-background transition-colors">{t(brand.key)}</span>
               </Link>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-foreground border-2">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-background border-2 border-primary font-semibold px-10">
               <Link to="/products">
                 {t('products.viewall')}
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -161,8 +166,8 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-90" />
+      <section className="py-20 md:py-22 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 opacity-90" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-background mb-6">{t('contact.title')}</h2>
           <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">{t('contact.subtitle')}</p>

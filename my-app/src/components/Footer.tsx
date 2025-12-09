@@ -7,7 +7,7 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-navy text-primary-foreground">
+    <footer className="bg-secondary-foreground/90 text-black">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -26,22 +26,22 @@ const Footer = () => {
             <h4 className="font-orbitron font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/" className="text-black hover:text-accent transition-colors">
                   {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/products" className="text-black hover:text-accent transition-colors">
                   {t('nav.products')}
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/about" className="text-black hover:text-accent transition-colors">
                   {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link to="/contact" className="text-black hover:text-accent transition-colors">
                   {t('nav.contact')}
                 </Link>
               </li>
@@ -52,23 +52,23 @@ const Footer = () => {
           <div>
             <h4 className="font-orbitron font-semibold text-lg mb-4">{t('nav.contact')}</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <MapPin className="w-8 h-8 text-accent" />
+              <li className="flex items-center gap-2 text-black">
+                <MapPin className="w-8 h-8 text-black" />
                 <span>{t('contact.address.text')}</span>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Phone className="w-4 h-4 text-accent" />
+              <li className="flex items-center gap-2 text-text-black">
+                <Phone className="w-4 h-4 text-black" />
                 <span>+66 98 103 2459</span>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Mail className="w-4 h-4 text-accent" />
+              <li className="flex items-center gap-2 text-text-black">
+                <Mail className="w-4 h-4 text-black" />
                 <span>info@n-west.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-10 pt-6 text-center text-primary-foreground/50">
+        <div className="border-t border-primary-foreground/10 mt-10 pt-6 text-center text-text-black">
           <p>© {new Date().getFullYear()} N-WEST. {t('footer.rights')}</p>
         </div>
       </div>
