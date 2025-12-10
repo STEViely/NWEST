@@ -18,7 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.title": "คุณภาพดีกว่า ราคาโดนใจ",
-    "hero.subtitle": "กระจกเลนส์วาย เพิ่มมุมมองกว้างขึ้น ลดมุมอับสายตา",
+    "hero.subtitle": "กระจกเลนส์ไวด์ เพิ่มมุมมองกว้างขึ้น ลดมุมอับสายตา",
     "hero.cta": "ดูสินค้าทั้งหมด",
     "hero.learn": "เรียนรู้เพิ่มเติม",
 
@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Features
     "features.title": "Special Features",
-    "features.subtitle": "้High-Quality Blue Coated Wide Lens Mirrors",
+    "features.subtitle": "High-Quality Blue Coated Wide Lens Mirrors",
     "features.antiglare.title": "Anti-Glare",
     "features.antiglare.desc":
       "Blue coating reduces glare from headlights of following vehicles, reducing eye fatigue during night driving.",

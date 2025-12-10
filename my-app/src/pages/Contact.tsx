@@ -80,6 +80,15 @@ const Contact = () => {
         </div>
       </section>
 
+      <div className="px-20 bg-background">
+        <Link to="https://www.facebook.com/nwest4">
+          <img
+            src="https://res.cloudinary.com/dbmscl9hm/image/upload/v1765315119/banner_c7tokm.jpg"
+            alt="Facebook Page"
+          />
+        </Link>
+      </div>
+
       {/* Contact Content */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -151,6 +160,36 @@ const Contact = () => {
                     <Send className="ml-2 w-5 h-5" />
                   </Button>
                 </form>
+              </div>
+            </div>
+            <div className="flex gap-12 mx-auto">
+              <div className="flex justify-center items-center">
+                <Link to="https://www.facebook.com/nwest4">
+                  <img
+                    src="https://res.cloudinary.com/dbmscl9hm/image/upload/v1765315989/facebook-1-svgrepo-com_ck2a5x.svg"
+                    alt="Facebook"
+                    className="w-12 h-12"
+                  />
+                </Link>
+              </div>
+
+              <div>
+                <Link to="https://line.me/R/ti/p/@nwest4">
+                  <img
+                    src="https://res.cloudinary.com/dbmscl9hm/image/upload/v1765315989/line-svgrepo-com_3_f5eg9f.svg"
+                    alt="Line"
+                    className="w-12 h-12"
+                  />
+                </Link>
+              </div>
+              <div>
+                <Link to="https://line.me/R/ti/p/@nwest4">
+                  <img
+                    src="https://res.cloudinary.com/dbmscl9hm/image/upload/v1765336116/instagram-1-svgrepo-com_1_qpz20w.svg"
+                    alt="Instagram"
+                    className="w-12 h-12"
+                  />
+                </Link>
               </div>
             </div>
 
